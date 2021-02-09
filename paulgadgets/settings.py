@@ -101,7 +101,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'saulgadgets.wsgi.application'
+WSGI_APPLICATION = 'paulgadgets.wsgi.application'
 
 
 # Database
