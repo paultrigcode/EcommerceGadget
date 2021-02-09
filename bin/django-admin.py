@@ -1,4 +1,4 @@
-#!/Users/paultrigcode/Desktop/saulgadgets-master/bin/python3.7
+#!/Users/paultrigcode/Desktop/paulgadgets/bin/python3.7
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
