@@ -6,8 +6,8 @@ SOCKFILE=/saulroot/saul_3_6_4/run/gunicorn.sock
 USER=sauluser
 GROUP=saulgroup
 NUM_WORKERS=3
-DJANGO_SETTINGS_MODULE=saulgadgets.settingsprod
-DJANGO_WSGI_MODULE=saulgadgets.wsgi
+DJANGO_SETTINGS_MODULE=paulgadgets.settingsprod
+DJANGO_WSGI_MODULE=paulgadgets.wsgi
 TIMEOUT=120
 
 cd $DJANGODIR
