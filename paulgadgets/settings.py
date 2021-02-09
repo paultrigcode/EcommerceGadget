@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hy@@^j(ita$-q&1*1+gr!mje4_2cc!z4d8u8q8_z(y@2e(vm*1'
+# SECRET_KEY = 'hy@@^j(ita$-q&1*1+gr!mje4_2cc!z4d8u8q8_z(y@2e(vm*1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -107,11 +107,18 @@ WSGI_APPLICATION = 'saulgadgets.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 
 
