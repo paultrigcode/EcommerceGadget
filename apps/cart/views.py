@@ -13,6 +13,7 @@ def cart_detail(request):
         b = "{'id': '%s', 'title': '%s', 'price': '%s', 'quantity': '%s', 'total_price': '%s', 'thumbnail': '%s', 'url': '%s', 'num_available': '%s'}," % (product.id, product.title, product.price, item['quantity'], item['total_price'], product.get_thumbnail, url, product.num_available)
 
         productsstring = productsstring + b
+        print(productsstring)
 
     if request.user.is_authenticated:
         first_name = request.user.first_name
