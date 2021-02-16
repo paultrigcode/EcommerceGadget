@@ -6,6 +6,7 @@ chardet==4.0.0
 cryptography==3.4.3
 Django==3.1.6
 future==0.18.2
+gunicorn==20.0.4
 html5lib==1.1
 idna==2.10
 paypal-checkout-serversdk==1.0.1
